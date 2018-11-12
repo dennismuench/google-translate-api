@@ -23,6 +23,7 @@ function translate(text, opts) {
         });
     }
 
+    opts.format = opts.format || 'text';
     opts.from = opts.from || 'auto';
     opts.to = opts.to || 'en';
 
@@ -33,6 +34,7 @@ function translate(text, opts) {
         var url = 'https://translate.google.com/translate_a/single';
         var data = {
             client: 't',
+            format: opts.format,
             sl: opts.from,
             tl: opts.to,
             hl: opts.to,
